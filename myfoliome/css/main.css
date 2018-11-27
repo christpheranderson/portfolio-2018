@@ -1,0 +1,448 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* background cover */
+.background {
+	background-image: url(../img/image1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+	overflow-y: auto;
+	width:100%;
+	height:100%; 
+	/*opacity: 0.5;
+    /*filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+/* nav bar*/
+.nav{
+ width: 350px;
+ height: auto;
+ /*background-color: black;*/
+ margin-top: 133px;
+}
+
+.nav a{
+	text-decoration: none;
+	font-size: 28px;
+	font-family:verdana;
+	font-weight:bold;
+	height: 90px;
+	margin: 5px 0;
+	float: left ;
+	display: inline-block;
+	background-color: gray;
+	color: black;
+	line-height:90px;
+	text-align: center; 
+	transition: 300ms;
+}
+
+ a.active, .nav a:hover {
+	background-color: blue;
+	color:black;
+	width: 100%;
+}
+
+.a {
+   width: 95%;
+}
+
+.b {
+   width: 85%;
+}
+
+.c {
+	width: 80%;
+}
+
+.d {
+	width: 80%;
+}
+
+.mobile-nav {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background: rgba(0,0,0,0.8);
+      z-index: 1;
+    }
+
+.mobile-nav a {
+      width: 100%;
+      color: #b2b2b2;
+      text-transform: uppercase;
+      font-size: 0.875em;
+      letter-spacing: 2px;
+      text-align: center;
+      transition: all 0.35s;
+      padding: 20px;
+}
+
+.content {
+	position: absolute;
+	width: 930px;
+	min-height: 500px;
+	height: auto;
+	/*background-color: gray;*/
+	right: 0;
+	top: 10%;
+}
+
+.home {
+	position: absolute;
+	right: 0;
+	bottom: -130px;
+	color: white;
+	font-family: verdana;
+	text-transform: uppercase;
+}
+
+.home h1 {
+	/*font-size: 95px;*/
+	font-size: 35px;
+	padding-right: 90px;
+    border-bottom: 1px solid white;
+    font-weight: 550;
+}
+
+ .home h1 {
+   overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*border-right: .15em solid gray; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 15px; /* Adjust as needed */
+  animation: 
+  typing 3.5s steps(40, end),
+  blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: gray; }
+}*
+
+.home h3 {
+	font-size: 28px;
+	padding: 5px 0;
+	opacity: 0.6;
+}
+
+.about{
+	position: absolute;
+	right: 0;
+	top: -19px;
+	color: white;
+	font-family: "Century Gothic", "Apple Gothic", AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif;
+	padding: 0 60px;
+	display: none;
+}
+
+.about p {
+ font-size: 18px;
+ line-height: 28px;
+ margin-bottom: 15px;
+}
+
+.gallery {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	padding: 0 60px;
+	display: none;
+	left:550px ;
+	margin-top: 99px;
+}
+
+.gallery .image {
+	width: 27%;
+	margin: 2%;
+	float: left;
+}
+
+div.image.one {
+	margin-top: -130px;
+}
+ 
+
+
+.image img{
+	width: 100%;
+	transition: all ease 0.5%;
+	-webkit-transition: all ease 0.5%;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.image img:hover {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+}
+
+.contact{
+	position: fixed;
+	right: 0;
+	top: 10px;
+	color: white;
+	padding: 0 60px;
+	display: none;
+}
+
+
+.inputtext {
+	width: 55%;
+	height: 65px;
+	border: 3px solid white;
+	color: white; 
+	background-color:rgba(0,0,0,0.7);
+	font-size: 20px;
+	padding: 0 10px; 
+	float: left;
+	margin-bottom:15px;
+	
+}
+
+.message {
+	width: 55%;
+	height: 135px;
+	border: 3px solid white;
+	color: white; 
+	background-color:rgba(0,0,0,0.7);
+	font-size: 20px;
+	padding: 0 10px; 
+	float: left;
+	
+	
+}
+
+.submitbutton {
+	width: 160px;
+	height: 65px;
+	font-family: arial;
+	background-color: gray;
+	color: black;
+	font-size: 28px;
+	border: none;
+	font-weight: bold;
+	float: left;
+	clear: both;
+	margin-top: 25px;
+}
+
+
+/* Media queries for responsive design */
+
+ 
+ 
+
+
+@media (min-width: 1390px) {
+	.mobile-nav{
+		display:none;
+        
+	}
+
+}
+
+@media (min-width: 1389px) {
+  .mobile-nav {
+  	display: none;
+  }
+}
+
+@media (max-width: 1340px) {
+  .background .nav a{
+    display: none;
+   }
+
+.content .about{
+	padding: 80px 80px;
+}
+
+.content .home{
+   	margin-bottom: 156px;
+    text-align: center;
+   }
+
+
+
+ }
+
+ @media (max-width:863px) {
+ 	.content .about {
+ 		margin-left:73px;
+ 	}
+
+ }
+
+@media (max-width:890px) {
+.content .home h1{
+      font-size: 76px;
+      font-weight: 500;
+      padding: 0 75px 0 90px;
+	}
+}
+
+@media (max-width:790px) {
+   .content .home h1{
+   	margin-left: 156px;
+   }
+
+   .content .about {
+   	margin-left: 108px;
+   	margin-right: -19px;
+   }
+}
+
+@media (max-width:760px) {
+	.content .about {
+	 margin-left: 130px;
+	}
+}
+@media (max-width:730px) {
+	.content .about {
+		margin-left:182px;
+	}
+}
+
+@media (max-width:650px) {
+	.content .home{
+	  margin-left: 219px;
+	}
+
+	.content .home h1 {
+		font-size:63px;
+	}
+
+	.content .about {
+		margin-left: 249px;
+	}
+}
+
+@media (max-width:619px) {
+	.content .about {
+		margin-left: 260px;
+	}
+}
+
+@media (max-width:619px) {
+	.content .about {
+		margin-left: 289px;
+	}
+}
+
+@media (max-width:584px) {
+	.content .about {
+		margin-left: 324px;
+	}
+}
+
+
+
+@media (max-width:535px) {
+	.mobile-nav a {
+		padding: 14px;
+	}
+
+}
+
+  
+ @media (max-width:525px) {
+ 	.content .home h3 {
+ 		margin-left: 118px;
+ 	}
+
+ 	.content .about {
+ 		margin-left: 363px;
+ 	}
+ }
+
+ @media (max-width:507px) {
+	.content .about {
+		margin-left: 393px;
+	}
+} 
+
+ @media (max-width:472px){
+ 	.mobile-nav a {
+ 		padding: 14px;
+ 	}
+ }
+
+ @media (max-width:470px) {
+ 	.mobile-nav a {
+ 		padding: 14px;
+ 	}
+
+	.content .about {
+		margin-left: 415px;
+	}
+
+ }
+
+ @media (max-width:470px) {
+ 	.content .home h1 {
+ 		font-size: 47px;
+ 		margin-left: 190px;
+ 	}
+
+ 	.content .home h3 {
+ 		margin-left: 190px;
+ 	}
+ }
+
+ @media (max-width:450px) {
+	.content .about {
+		margin-left: 440px;
+	}
+}
+
+ @media (max-width:430px) {
+ 	.mobile-nav a {
+ 		padding: 8px;
+   }
+
+    .content .home {
+   	text-align: center;
+   }
+
+   .content .about {
+   	text-align:center;
+   }
+ }
+
+
+@media (max-width:410px) {
+	.mobile-nav a {
+		padding: 8px;
+   }
+}
+
+@media (max-width:405px) {
+	.content .about {
+		margin-left: 476px;
+	}
+}
+
+
+
+
+
+
